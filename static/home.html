@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 0 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .header-content h1 {
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            padding-top: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 12px 25px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        section h1, section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .key-points {
+            list-style: none;
+            padding: 0;
+        }
+
+        .key-points li {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background: linear-gradient(135deg, #333 0%, #444 100%);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Welcome to My Cloud Learning Journey</h1>
+            <nav>
+                <ul>
+                    <li><a href="home">Home</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="contact">Contact</a></li>
+                    <li><a href="courses">Courses</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h1>Learning AWS and DevOps</h1>
+            <p>This project is made for practice purposes, focusing on cloud technologies and DevOps practices to build real-world solutions.</p>
+        </section>
+
+        <section>
+            <h2>Key Learning Objectives</h2>
+            <ul class="key-points">
+                <li>Mastering Infrastructure as Code (IaC) with Terraform and AWS CloudFormation</li>
+                <li>Implementing CI/CD pipelines using GitHub Actions and AWS CodePipeline</li>
+                <li>Containerizing applications with Docker and orchestrating with Kubernetes</li>
+                <li>Automating cloud deployments using Ansible and Jenkins</li>
+                <li>Monitoring solutions with AWS CloudWatch and Prometheus/Grafana</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Why Cloud Computing Matters</h2>
+            <p>Cloud skills are essential for modern software development, offering:</p>
+            <ul class="key-points">
+                <li>Scalability to handle variable workloads efficiently</li>
+                <li>Cost-effectiveness with pay-as-you-go models</li>
+                <li>Global availability through distributed data centers</li>
+                <li>Enhanced security with enterprise-grade protections</li>
+                <li>Faster innovation with managed services</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>My Cloud Projects</h2>
+            <ul class="key-points">
+                <li>Automated web application deployment pipeline</li>
+                <li>Serverless API with AWS Lambda and API Gateway</li>
+                <li>Highly available three-tier architecture</li>
+                <li>Cost optimization strategies implementation</li>
+                <li>Disaster recovery solution design</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Courses </h2>
+            <p>Please look at the <a href="courses">courses</a> section.</p>  
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Harshal Mali | Cloud & DevOps Enthusiast</p>
+        </div>
+    </footer>
+</body>
+</html>
+    

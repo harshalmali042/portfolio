@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Harshal Mali</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .header-title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            margin-bottom: 120px;
+        }
+
+        .profile-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .welcome-section {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+
+        .welcome-section h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .welcome-section p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .section-title {
+            color: #667eea;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid #667eea;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .info-card h3 {
+            color: #667eea;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .contact-list {
+            list-style: none;
+        }
+
+        .contact-list li {
+            margin: 12px 0;
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-weight: 500;
+        }
+
+        .contact-list li:last-child {
+            border-bottom: none;
+        }
+
+        .skills-list {
+            list-style: none;
+        }
+
+        .skills-list li {
+            margin: 10px 0;
+            padding: 12px 15px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border-radius: 8px;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(240, 147, 251, 0.3);
+        }
+
+        .academic-list {
+            list-style: none;
+        }
+
+        .academic-list li {
+            margin: 15px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            font-weight: 500;
+        }
+
+        .cgpa-highlight {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 20px 0;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .footer-content p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            nav ul li a {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-section, .info-card {
+                padding: 25px;
+            }
+
+            .welcome-section h1 {
+                font-size: 2rem;
+            }
+        }
+
+        .highlight-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="header-title">Harshal Mali</h1>
+            <nav>
+                <ul>
+                    <li><a href="home">Home</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="contact">Contact</a></li>
+                    <li><a href="courses">Courses</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="welcome-section">
+            <h1>Welcome to My Profile!</h1>
+            <p>AWS DevOps enthusiast and knowledge sharing advocate</p>
+        </div>
+
+        <div class="profile-section">
+            <h2 class="section-title">About Me</h2>
+            <p>Hi Everyone, my name is <span class="highlight-text">Harshal Mali</span> and welcome to my page! I am an AWS DevOps enthusiast and a strong believer in sharing knowledge.</p>
+            
+            <p>I have experience working on various cloud-based applications and projects utilizing AWS services such as EC2, Lambda, and RDS. Apart from my studies in Computer Engineering, I am actively involved in practical projects that enhance my skills in DevOps and cloud computing.</p>
+            
+            <p>Please subscribe to the channel to keep learning and growing together. Thanks!</p>
+        </div>
+
+        <div class="content-grid">
+            <div class="info-card">
+                <h3>Contact Information</h3>
+                <ul class="contact-list">
+                    <li><strong>Name:</strong> Harshal Mali</li>
+                    <li><strong>Profession:</strong> Computer Engineer</li>
+                    <li><strong>Phone:</strong> +91 9175426819</li>
+                    <li><strong>Email:</strong> <a href="mailto:harshalmali4224@gmail.com">harshalmali4224@gmail.com</a></li>
+                    <li><strong>GitHub:</strong> <a href="https://github.com/harshalmali042" target="_blank">harshalmali042</a></li>
+                    <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/harsh042" target="_blank">harsh042</a></li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Academic Background</h3>
+                <ul class="academic-list">
+                    <li>Computer Engineering [BE] - University of Mumbai | 2022-2025</li>
+                    <li>Computer Engineering [Diploma] - MSBTE | 2019-2022</li>
+                    <li>Amazon Web Services [Ethan's Tech] | Jan 25 - Apr 25</li>
+                    <li>Cloud Computing [Acmegrade] | July 24 - Aug 24</li>
+                </ul>
+                <div class="cgpa-highlight">
+                    CGPA: 7.74 | Marks: 78%
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-section">
+            <h2 class="section-title">Professional Summary</h2>
+            <p>I am a Computer Engineering student with strong knowledge of technical skills like HTML, CSS, SQL, and Python, along with AWS services like VPC, Lambda, CloudFormation, IAM Roles, Relational Database Service, Elastic Beanstalk, and DevOps tools. My dedication to learning new things and my experience with practical projects, including cloud-based applications, drives my passion for technology and innovation.</p>
+        </div>
+
+        <div class="content-grid">
+            <div class="info-card">
+                <h3>Technical Skills</h3>
+                <ul class="skills-list">
+                    <li>Programming: HTML, CSS, SQL, Python</li>
+                    <li>AWS Services: EC2, VPC, Lambda, CloudFormation</li>
+                    <li>AWS Tools: IAM, RDS, Route 53, Elastic Beanstalk</li>
+                    <li>DevOps: Git, GitHub, Docker, Kubernetes</li>
+                    <li>Infrastructure: Terraform, Jenkins, Ansible</li>
+                    <li>Operating System: Linux</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Additional Information</h3>
+                <div style="margin: 20px 0;">
+                    <h4 style="color: #667eea; margin-bottom: 10px;">Languages Spoken:</h4>
+                    <p style="font-size: 1.1rem; color: #555;">English, Hindi, Marathi</p>
+                </div>
+                <div style="margin: 20px 0;">
+                    <h4 style="color: #667eea; margin-bottom: 10px;">Interests:</h4>
+                    <p style="color: #555;">Cloud Computing, DevOps, Automation, Knowledge Sharing</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Harshal Mali | AWS DevOps Engineer</p>
+        </div>
+    </footer>
+</body>
+</html>
+
